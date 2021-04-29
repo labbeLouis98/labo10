@@ -1,0 +1,155 @@
+.carrousel-2 {
+    display: flex;
+    width: 600vw;
+    height: 36vh;
+    transition: transform .4s cubic-bezier(.28, .66, .79, .71);
+    transform: translate(0);
+    flex-wrap: nowrap !important;
+    //justify-content: center;
+
+
+    .slide__conteneur {
+        width: 100vw;
+        min-height: 30vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-family: $font__main;
+        background-color: #A8DADC;
+        padding: .5rem;
+        
+
+        @include tablette {
+            width: 100vw;
+
+            &:nth-child(1) {
+
+                width: 50vw;
+            }
+
+            &:nth-child(2) {
+
+                width: 50vw;
+            }
+
+
+        }
+
+        .slide {
+
+            border-radius: 1rem;
+            border: .4rem solid #264653;
+
+            width: 90%;
+            height: 90%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: rgb(26, 33, 41);
+
+            &:nth-of-type(1) {
+                background-color: #2a9d8f;
+            }
+
+            img {
+                display: none;
+                margin: 5%;
+            }
+
+            .slide__info {
+                font-weight: bold;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                width: 100%;
+                margin-left: 0;
+                padding: 1%;
+
+
+                a {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    font-size: clamp(1.2rem, #{"-0.875rem + 8.333vw"}, 1.6rem);
+                    text-decoration: none;
+                    text-align: center;
+
+                }
+
+                p {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    font-size: clamp(.7rem, #{"-0.875rem + 8.333vw"}, 1.5rem);
+
+                }
+            }
+        }
+    }
+
+
+
+
+
+
+    /* Fin article slide */
+}
+
+/* Fin section carou */
+
+.ctrl-carrousel {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw; // largeur fixe de 100vw pour occuper 100% de la page accueil sans deborder dans les 300vw 
+    background-color: #557a95;
+
+    .bout {
+        background-color: #A8DADC;
+
+        justify-content: space-around;
+        margin: .5rem;
+        align-items: center;
+        border-radius: 50%;
+
+        input {
+            margin: .25rem;
+            background-color: #A8DADC;
+
+            width: 1.5rem;
+            height: 1.5rem;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+
+        }
+
+        @include tablette {
+            &:nth-of-type(6) {
+                display: none;
+            }
+
+        }
+
+    }
+
+    @include tablette {
+        #id-Spécifique {
+            &:nth-of-type(5) {
+                display: none;
+
+            }
+        }
+
+        #id-Image\ 2d\/3d {
+            &:nth-of-type(5) {
+                display: none;
+
+            }
+        }
+    }
+
+
+}

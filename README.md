@@ -2,6 +2,17 @@
 
 _s
 ===
+labo8-TIM 
+Louis-Nicolas Labbé
+Mardi gr-1
+Site web word press 
+
+https://github.com/labbeLouis98
+
+Liens Webdev: 
+
+https://e1641980.webdev.cmaisonneuve.qc.ca/4w4/
+
 
 Hi. I'm a starter theme called `_s`, or `underscores`, if you like. I'm a theme meant for hacking so don't use me as a Parent Theme. Instead try turning me into the next, most awesome, WordPress theme out there. That's what I'm here for.
 

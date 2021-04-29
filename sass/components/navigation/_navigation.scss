@@ -1,0 +1,267 @@
+.main-navigation {
+	display: block;
+	width: 100vw;
+	
+	ul {
+		display: none;
+		position: absolute;
+		width: 100%;
+		list-style: none;
+		margin:0;
+		padding-left: 0;
+		background-color:#264653;
+		text-align: left;
+		justify-content: left;
+		z-index: 999;
+
+		ul {
+			box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
+			//float: left;
+			position: absolute;
+			top: 100%;
+			transition: left .2s;
+			
+			left: -999em;
+			z-index: 99999;
+
+			li {
+				a {
+					
+					padding-left: 12px;
+					
+				}
+			}
+
+			a {
+				width: 100%;
+				margin: 0;
+				
+			}
+
+		}
+
+		/* fin sub menu */
+
+		li:hover>ul,
+		li.focus>ul {
+			left: 0;
+
+		}
+
+		li {
+			position: relative;
+			flex: 1;
+	
+		}
+
+	}
+
+	a {
+		display: block;
+		text-decoration: none;
+		padding: .5rem;
+	}
+
+	.current_page_item>a,
+	.current-menu-item>a,
+	.current_page_ancestor>a,
+	.current-menu-ancestor>a {}
+}
+
+/* -----------------------------------------------------------------------------
+Bouton burger 
+------------------------------------------------------------------------------*/
+.menu-toggle {
+	padding: 0;
+	//	transition : transform .25s;
+	//	transform : rotate(0deg);
+	border: 0;
+	
+}
+
+.menu-toggle:hover,
+.menu-toggle:focus {
+	background: #fafbfc;
+}
+
+.menu-toggle:focus {
+	outline: 1px solid #fff;
+	outline-offset: -4px;
+}
+
+.menu-toggle:active {
+	transform: scale(0.99);
+}
+
+
+.menu-toggle,
+.main-navigation.toggled ul {
+	display: block;
+}
+
+/* Small menu. */
+.menu-toggle,
+.main-navigation.toggled ul {
+	
+	li {
+
+
+		a {
+			&[href="#"]::after {
+				position: absolute;
+				content: "\2B9E";
+				width: 100%;
+				height: 100%;
+				top: 25%;
+				bottom: 0;
+				left: 95%;
+				right: 0;
+
+
+			}
+		}
+
+
+	}
+
+	li.focus {
+		a {
+			&[href="#"]::after {
+				content: "\2B9F";
+
+
+			}
+		}
+
+
+	}
+
+}
+
+/* ---------------------------------------------------------------------------
+menu tablet
+------------------------------------------------------------------------------ */
+@media screen and (min-width: 37.5em) {
+
+	.menu-toggle {
+		display: none;
+		
+
+	}
+	.main-navigation{
+		.menu-principal-container{
+			height: 4rem;
+
+		
+		a{
+			margin-left: 0;
+			display: flex;
+			justify-content:left ;
+		} 
+	}
+		
+}
+
+
+	.main-navigation.toggled ul,
+	.main-navigation ul {
+		display: flex;
+		position: static;
+		align-items: center;
+		width: 100vw;
+		margin: 0;
+		
+		
+		a {
+			&[href="#"]::after {
+				//display: none;
+				content: "\2B9E";
+
+			}
+		}
+
+		li:hover {
+			a {
+				&[href="#"]::after {
+					content: "\2B9F";
+	
+				}
+			}
+	
+	
+		}
+
+/*-----------------------affichage liste du menu deroulant----------------------*/
+		li:hover ul {
+			display: flex;
+			flex-direction: column;  // flex vas permettre au width detre ajuste responsively 
+			position: absolute;
+			width: 100%;
+			margin:0;
+			padding: 0;
+			border: 0;
+			height: auto;  // hauter flex et responsive a la grosseur de la liste
+			animation:  growDown 300ms ease-in-out forwards;
+			
+
+			a{
+				font-size: clamp(.8rem, #{"-0.875rem + 3.333vw"}, 1rem);
+				margin:0;
+			}
+		}
+
+		ul {
+			display: none;
+			
+		}
+
+
+		a {
+			font-size: clamp(.8rem, #{"-0.875rem + 3.333vw"}, 1.4rem);
+			text-align: center;
+			
+			
+		}
+
+	}
+
+
+}
+
+.comment-navigation,
+.posts-navigation,
+.post-navigation {
+
+	.site-main & {
+		margin: 0 0 1.5em;
+	}
+
+	.nav-links {
+		display: flex;
+	}
+
+	.nav-previous {
+		flex: 1 0 50%;
+	}
+
+	.nav-next {
+		text-align: end;
+		flex: 1 0 50%;
+	}
+}
+
+/*-------------- Animation keyframes menu -----------*/
+
+@keyframes growDown {
+	0%{
+		transform: scaleY(0);
+	}
+
+	80%{
+		transform: scaleY(1.1);
+	}
+
+	100%{
+		transform: scaleY(1);
+	}
+}
