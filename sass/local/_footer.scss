@@ -1,3 +1,5 @@
+
+
 .site-footer{
   display: grid;
   flex-direction: column;
@@ -8,6 +10,27 @@
     display: flex;
     flex-direction: row;
     justify-content: space-around;
+
+    #calendar-2{
+      display: none;
+    }
+
+    #search-3{
+      display: none;
+    }
+
+    @include tablette{
+      #calendar-2{
+        display: flex;
+      }
+
+      #search-3{
+        display: flex;
+      }
+
+      
+    }
+    
     
     section{
       display: flex;
@@ -17,19 +40,31 @@
       margin: 1rem;
       //background-color: #c3e1e2;
       width: 100%;
+      
+      
+        p{
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          font-size: clamp(.5rem, #{"-0.875rem + 8.333vw"}, 1rem);
+          margin: .5rem;
+        }
   
-      p{
+        h2{
+          margin: .5rem;
+          font-size: clamp(.5rem, #{"-0.875rem + 8.333vw"}, 1.5rem);
+        }
+      
+      
+
+      div{
+      
         display: flex;
-        justify-content: center;
-        align-items: center;
-        font-size: 1rem;
-        margin: .5rem;
+        flex-direction: column-reverse;
+        
+
       }
 
-      h2{
-        margin: .5rem;
-        font-size: 1.5rem;
-      }
     }
   }
   
@@ -37,6 +72,6 @@
 /*---------------changement couleur footer----------------------*/
   background-color: #557a95;
   color: #F1FAEE;
-  border: .5rem solid #2a9d8f ;
+  //border: .5rem solid #2a9d8f ;
 }
 

@@ -19,8 +19,7 @@ header{
           padding: 0;
           animation: animTitre 2.5s both;
           transition: cubic-bezier(.17, .67, .83, .67);
-          color: brown;
-      
+          
           a {
               text-decoration: none;
           }
@@ -113,11 +112,7 @@ grid-template-rows: 60% 10% 30%;
 /*-----------------------Pages cours--------------------------*/
 
 article{
-  display: flex;
-  justify-content: center;
-  width: 100vw;
-  flex-direction: column;
-  
+ 
   .entry-header{
     display: flex;
     
@@ -132,7 +127,6 @@ article{
     }
 
   }
-  
 
   span{
     display: none;
@@ -144,38 +138,74 @@ article{
   width: 60%;
   justify-content: space-between;
   margin-left: 2.5rem;
+  flex-direction: column;
   
 
-  p{
+   p{
+    justify-content: center;
+    align-items: center;
     font-size: clamp(.8rem, #{"-0.875rem + 8.333vw"}, 1.5rem);
     font-weight: normal;
-  }
+    margin: 1%;
+    }
+
   }
 
 }
 
-.nav-links{
-  display: flex;
-  width: 100%;
-  justify-content: center;
-  align-items: center;
-  margin: 2.5rem;
+
+#primary > nav{
+  background-color: #75a5cc;
+  //margin-top: 5rem;
+  justify-content: left;
+  width: 60%;
+
+  .nav-links{
+    //flex-direction: column;
+    display: flex;
+    //width: 80%;
+    justify-content: center;
+    align-items: center;
+    margin: 2rem;
+    
+  }
   
+  .nav-next, .nav-previous{
+    display: block;
+    justify-content: space-between;
+  }
+
 }
 
-.nav-next, .nav-previous{
-  display: block;
-  justify-content: space-between;
-}
 
-/*
+
+
+/*----------------Zone comentaire----------------------*/
 h3{
   display: none;
 }
 
+#commentform{
+  display: none;
+}
 
-
-  form{
+  /*form{
     display: none;
+  }*/
+  
+
+  /*----------------------Widget--------------------*/@at-root
+  aside{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    background-color: #75a5cc;
+    color: #F1FAEE;
+
+    //width: 100%;
+
+  
   }
-  */

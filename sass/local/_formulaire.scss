@@ -1,0 +1,24 @@
+.admin-rapide{
+    display: flex;
+    justify-content: center;
+    
+    width: 100vw;
+
+    div{
+        flex-direction: column;
+    }
+
+
+
+    h3{
+        font-size: 2.5rem;
+            display: flex;
+            justify-content: center;
+            background-color: #557a95;
+            color: #F1FAEE;
+            align-items: center;
+            padding: .5rem;
+            height: 6rem;
+      }
+
+}

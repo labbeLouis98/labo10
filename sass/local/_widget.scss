@@ -1,6 +1,29 @@
 
   /*----------------Widget------------------------*/
-  #categories-2{
-    display: block;
-    
+  
+
+  /*----------------------Widget--------------------*/
+  aside{
+    display: none;
+  }
+  @include tablette{
+    aside{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      //padding-left: 1rem;
+      //padding-right: 1rem;
+      background-color: #75a5cc;
+      color: #F1FAEE;
+  
+    }
+  }
+  
+
+  .post-thumbnail{
+    img{
+      width: 60%;
+      height: auto;
+    }
   }

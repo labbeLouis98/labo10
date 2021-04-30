@@ -76,8 +76,23 @@ get_header();
 
     </section>
 
+    <section class="admin-rapide">
+
+    <div>
+
+        <h3>Ajouter un article de catégorie "Nouvelles"</h3>
+        <input type="text" name="title" placeholder="Titre">
+        <textarea name="content"></textarea>
+        <button id="bout-rapide">Créer une nouvelle</button>
+
+    </div>
+        
+    </section>
+
+
+
     <section class="nouvelles">
-    <button id="bout_nouvelles">Dernières Nouvelles</button>
+    
     <section></section>
 
     </section>

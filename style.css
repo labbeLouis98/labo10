@@ -1716,7 +1716,6 @@ header div .site-title {
   padding: 0;
   animation: animTitre 2.5s both;
   transition: cubic-bezier(0.17, 0.67, 0.83, 0.67);
-  color: brown;
 }
 
 header div .site-title a {
@@ -1794,13 +1793,6 @@ grid-template-rows: 60% 10% 30%;
 }
 
 /*-----------------------Pages cours--------------------------*/
-article {
-  display: flex;
-  justify-content: center;
-  width: 100vw;
-  flex-direction: column;
-}
-
 article .entry-header {
   display: flex;
   justify-content: left;
@@ -1823,37 +1815,59 @@ article .entry-content {
   width: 60%;
   justify-content: space-between;
   margin-left: 2.5rem;
+  flex-direction: column;
 }
 
 article .entry-content p {
-  font-size: clamp(0.8rem, -0.875rem + 8.333vw, 1.5rem);
-  font-weight: normal;
-}
-
-.nav-links {
-  display: flex;
-  width: 100%;
   justify-content: center;
   align-items: center;
-  margin: 2.5rem;
+  font-size: clamp(0.8rem, -0.875rem + 8.333vw, 1.5rem);
+  font-weight: normal;
+  margin: 1%;
 }
 
-.nav-next, .nav-previous {
+#primary > nav {
+  background-color: #75a5cc;
+  justify-content: left;
+  width: 60%;
+}
+
+#primary > nav .nav-links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 2rem;
+}
+
+#primary > nav .nav-next, #primary > nav .nav-previous {
   display: block;
   justify-content: space-between;
 }
 
-/*
-h3{
+/*----------------Zone comentaire----------------------*/
+h3 {
   display: none;
 }
 
+#commentform {
+  display: none;
+}
 
-
-  form{
+/*form{
     display: none;
-  }
-  */
+  }*/
+/*----------------------Widget--------------------*/
+aside {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  background-color: #75a5cc;
+  color: #F1FAEE;
+}
+
 /* Local/footer
 --------------------------------------------- */
 .site-footer {
@@ -1863,13 +1877,29 @@ h3{
   /*---------------changement couleur footer----------------------*/
   background-color: #557a95;
   color: #F1FAEE;
-  border: .5rem solid #2a9d8f;
 }
 
 .site-footer .pdp {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
+}
+
+.site-footer .pdp #calendar-2 {
+  display: none;
+}
+
+.site-footer .pdp #search-3 {
+  display: none;
+}
+
+@media (min-width: 800px) {
+  .site-footer .pdp #calendar-2 {
+    display: flex;
+  }
+  .site-footer .pdp #search-3 {
+    display: flex;
+  }
 }
 
 .site-footer .pdp section {
@@ -1885,19 +1915,64 @@ h3{
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 1rem;
+  font-size: clamp(0.5rem, -0.875rem + 8.333vw, 1rem);
   margin: .5rem;
 }
 
 .site-footer .pdp section h2 {
   margin: .5rem;
-  font-size: 1.5rem;
+  font-size: clamp(0.5rem, -0.875rem + 8.333vw, 1.5rem);
+}
+
+.site-footer .pdp section div {
+  display: flex;
+  flex-direction: column-reverse;
 }
 
 /* Local/widget
 --------------------------------------------- */
 /*----------------Widget------------------------*/
-#categories-2 {
-  display: block;
+/*----------------------Widget--------------------*/
+aside {
+  display: none;
+}
+
+@media (min-width: 800px) {
+  aside {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #75a5cc;
+    color: #F1FAEE;
+  }
+}
+
+.post-thumbnail img {
+  width: 60%;
+  height: auto;
+}
+
+/* Local/formulaire
+--------------------------------------------- */
+.admin-rapide {
+  display: flex;
+  justify-content: center;
+  width: 100vw;
+}
+
+.admin-rapide div {
+  flex-direction: column;
+}
+
+.admin-rapide h3 {
+  font-size: 2.5rem;
+  display: flex;
+  justify-content: center;
+  background-color: #557a95;
+  color: #F1FAEE;
+  align-items: center;
+  padding: .5rem;
+  height: 6rem;
 }
 /*# sourceMappingURL=style.css.map */
