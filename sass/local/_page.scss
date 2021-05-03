@@ -124,6 +124,8 @@ article{
       margin: 0;
       display: flex;
       justify-content: center;
+      font-size: clamp(.8rem, #{"-0.875rem + 8.333vw"}, 1.5rem);
+
     }
 
   }
@@ -189,23 +191,7 @@ h3{
   display: none;
 }
 
-  /*form{
-    display: none;
-  }*/
+ 
   
 
-  /*----------------------Widget--------------------*/@at-root
-  aside{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-direction: column;
-    padding-left: 1rem;
-    padding-right: 1rem;
-    background-color: #75a5cc;
-    color: #F1FAEE;
-
-    //width: 100%;
-
   
-  }
