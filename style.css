@@ -659,8 +659,15 @@ textarea {
 --------------------------------------------------------------*/
 .site {
   display: grid;
-  grid-template-columns: 70% 30%;
-  grid-template-areas: "header header" "main sidebar" "footer footer";
+  grid-template-columns: auto 25%;
+  grid-template-areas: "header header" "main main" "sidebar sidebar" "footer footer";
+}
+
+@media (min-width: 800px) {
+  .site {
+    grid-template-columns: 75% 25%;
+    grid-template-areas: "header header" "main sidebar" "footer footer";
+  }
 }
 
 .site-header {
@@ -675,6 +682,8 @@ textarea {
 
 .widget-area {
   grid-area: sidebar;
+  background-color: #75a5cc;
+  color: #F1FAEE;
 }
 
 .site-footer {
@@ -1799,12 +1808,17 @@ article .entry-header {
   margin-left: 2.5rem;
 }
 
-article .entry-header .entry-ttile {
+article .entry-header .entry-title {
   font-family: "Montserrat", sans-serif;
   margin: 0;
   display: flex;
   justify-content: center;
-  font-size: clamp(0.8rem, -0.875rem + 8.333vw, 1.5rem);
+  font-size: clamp(1.5rem, -0.875rem + 8.333vw, 3rem);
+  background-color: #2a9d8f;
+  color: #F1FAEE;
+  align-items: center;
+  margin: .5rem;
+  padding: .5rem;
 }
 
 article span {
@@ -1918,18 +1932,13 @@ h3 {
 /* Local/widget
 --------------------------------------------- */
 /*----------------------Widget--------------------*/
-aside {
-  display: none;
-}
-
+/*------------------------side bar desktop-----------------------*/
 @media (min-width: 800px) {
   aside {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    background-color: #75a5cc;
-    color: #F1FAEE;
   }
   aside #categories-2 {
     width: 70%;

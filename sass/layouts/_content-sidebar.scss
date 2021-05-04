@@ -1,11 +1,23 @@
 .site {
 	display: grid;
-	//grid-template-columns: auto ($size__site-sidebar);
-	grid-template-columns: 70% 30%;
+	grid-template-columns: auto ($size__site-sidebar);
+	//grid-template-columns: 75% 25%;
 	grid-template-areas:
+		"header header"
+		"main main"
+		"sidebar sidebar"
+		"footer footer";
+}
+
+@include tablette{
+	.site{
+		grid-template-columns: 75% 25%;
+		grid-template-areas:
 		"header header"
 		"main sidebar"
 		"footer footer";
+	}
+	
 }
 
 .site-header {
@@ -20,6 +32,8 @@
 
 .widget-area {
 	grid-area: sidebar;
+	background-color: #75a5cc;
+      color: #F1FAEE;
 }
 
 .site-footer {

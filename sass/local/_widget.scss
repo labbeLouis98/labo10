@@ -1,8 +1,8 @@
 
   /*----------------------Widget--------------------*/
-  aside{
-    display: none;
-  }
+  
+
+  /*------------------------side bar desktop-----------------------*/
   @include tablette{
     aside{
       display: flex;
@@ -11,8 +11,7 @@
       flex-direction: column;
       //padding-left: 1rem;
       //padding-right: 1rem;
-      background-color: #75a5cc;
-      color: #F1FAEE;
+      
 
       #categories-2{
         width: 70%;

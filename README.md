@@ -2,7 +2,7 @@
 
 _s
 ===
-labo8-TIM 
+tp2-TIM 
 Louis-Nicolas Labbé
 Mardi gr-1
 Site web word press 
