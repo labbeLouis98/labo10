@@ -17,14 +17,19 @@
         width: 70%;
         font-size: clamp(1rem, #{"-0.875rem + 8.333vw"}, 1.5rem);
       }
+
+      #media_gallery-2{
+        width: 80%;
+        margin: 4%;
+        
+  
+        
+      }
   
     }
   }
   
 
-  .post-thumbnail{
-    img{
-      width: 60%;
-      height: auto;
-    }
-  }
+  
+
+  

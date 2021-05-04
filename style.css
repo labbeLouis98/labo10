@@ -659,17 +659,18 @@ textarea {
 --------------------------------------------------------------*/
 .site {
   display: grid;
-  grid-template-columns: auto 25%;
+  grid-template-columns: 100%;
   grid-template-areas: "header header" "main main" "sidebar sidebar" "footer footer";
 }
 
-@media (min-width: 800px) {
+@media (min-width: 1200px) {
   .site {
     grid-template-columns: 75% 25%;
     grid-template-areas: "header header" "main sidebar" "footer footer";
   }
 }
 
+/*------------------------side bar desktop-----------------------*/
 .site-header {
   grid-area: header;
 }
@@ -1944,11 +1945,10 @@ h3 {
     width: 70%;
     font-size: clamp(1rem, -0.875rem + 8.333vw, 1.5rem);
   }
-}
-
-.post-thumbnail img {
-  width: 60%;
-  height: auto;
+  aside #media_gallery-2 {
+    width: 80%;
+    margin: 4%;
+  }
 }
 
 /* Local/formulaire
