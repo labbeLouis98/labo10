@@ -13,10 +13,15 @@ body{
 	.site {
 		display: grid;
 		grid-template-columns: auto;
-		grid-template-areas:
+
+
+		/*grid-template-areas:
 			"header"
 			"main"
+			"widget"
 			"footer";
+			*/
+
 	}
 }
 

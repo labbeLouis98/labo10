@@ -21,6 +21,8 @@ get_header();
 				?>
     </header><!-- .page-header -->
 
+    <section id="annonce"></section>
+
     <section class="list-cours">
 
     <?php

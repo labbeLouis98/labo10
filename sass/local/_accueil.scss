@@ -23,6 +23,12 @@ body.home::after {
     z-index: -1;
 }
 
+.menu-principal-container{
+
+    margin: 0;
+    padding: 0;
+}
+
 /*----------------------------MEP SECTION et article--------------------------*/
 
 /*Site-main appellé : list-cours */
@@ -145,3 +151,30 @@ body.home::after {
 }
 
 
+#annonce{
+    flex-direction: column;
+    
+    width: 100vw;
+    height: 20vh;
+    display: flex;
+    background-color: #f4a261;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+
+    h2{
+
+        font-size: 2.6rem;
+        margin: 0;
+        display: flex;
+        color: #1D3557;
+        align-items: center;
+        height: 6rem;
+      }
+
+    p{
+        
+        margin: 0;
+        font-size:clamp(.8rem, #{"-0.875rem + 8.333vw"}, 1.4rem);
+    }
+}

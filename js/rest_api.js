@@ -1,16 +1,23 @@
 (function () {
     let bouton = document.getElementById('bout_nouvelles')
 	let nouvelles = document.querySelector('.nouvelles section')
+	let annonce = document.getElementById('annonce')
 
-	window.addEventListener('load', monAjax)
+
+	window.addEventListener('load', function(){
+		monAjax(monObjJS.siteURL + '/wp-json/wp/v2/posts?categories=35&order=desc', nouvelles)
+		monAjax(monObjJS.siteURL + '/wp-json/wp/v2/posts?categories=36&order=desc', annonce)
+
+	})
 
 	//bouton.addEventListener('mousedown', monAjax)
 	
-	function monAjax()
+	function monAjax(requete, elemDom)
 	{
 	   let maRequete = new XMLHttpRequest();
 	   console.log(maRequete)
-	   maRequete.open('GET', monObjJS.siteURL + '/wp-json/wp/v2/posts?categories=35&order=desc');
+	   maRequete.open('GET', requete );
+	   
 	   maRequete.onload = function () {
 		   console.log(maRequete)
 		   if (maRequete.status >= 200 && maRequete.status < 400) {
@@ -21,7 +28,7 @@
 				   chaine += elm.content.rendered
 
 			   }
-			   nouvelles.innerHTML = chaine;
+			   elemDom.innerHTML = chaine;
 			}
 		    else {
 			   console.log('La connexion est faite mais il y a une erreur')
@@ -44,7 +51,7 @@
 			"title" : document.querySelector('.admin-rapide [name="title"]').value,
 			"content": document.querySelector('.admin-rapide [name="content"]').value ,
 			"status": "publish",
-			"categories" : [35] 
+			"categories" : [36] 
 		}
 
 		console.log(monArticle)

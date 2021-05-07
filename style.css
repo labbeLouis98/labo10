@@ -702,7 +702,12 @@ body {
 .no-sidebar .site {
   display: grid;
   grid-template-columns: auto;
-  grid-template-areas: "header" "main" "footer";
+  /*grid-template-areas:
+			"header"
+			"main"
+			"widget"
+			"footer";
+			*/
 }
 
 /*
@@ -841,7 +846,7 @@ menu tablet
     display: none;
   }
   .main-navigation .menu-principal-container {
-    height: 4rem;
+    height: 2rem;
   }
   .main-navigation .menu-principal-container a {
     margin-left: 0;
@@ -1176,6 +1181,11 @@ body.home::after {
   }
 }
 
+.menu-principal-container {
+  margin: 0;
+  padding: 0;
+}
+
 /*----------------------------MEP SECTION et article--------------------------*/
 /*Site-main appellé : list-cours */
 .list-cours {
@@ -1277,6 +1287,31 @@ body.home::after {
 }
 
 .nouvelles p {
+  font-size: clamp(0.8rem, -0.875rem + 8.333vw, 1.4rem);
+}
+
+#annonce {
+  flex-direction: column;
+  width: 100vw;
+  height: 20vh;
+  display: flex;
+  background-color: #f4a261;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+}
+
+#annonce h2 {
+  font-size: 2.6rem;
+  margin: 0;
+  display: flex;
+  color: #1D3557;
+  align-items: center;
+  height: 6rem;
+}
+
+#annonce p {
+  margin: 0;
   font-size: clamp(0.8rem, -0.875rem + 8.333vw, 1.4rem);
 }
 
@@ -1933,24 +1968,24 @@ h3 {
 /* Local/widget
 --------------------------------------------- */
 /*----------------------Widget--------------------*/
-/*------------------------side bar desktop-----------------------*/
-@media (min-width: 800px) {
-  aside {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-  }
-  aside #categories-2 {
-    width: 70%;
-    font-size: clamp(1rem, -0.875rem + 8.333vw, 1.5rem);
-  }
-  aside #media_gallery-2 {
-    width: 80%;
-    margin: 4%;
-  }
+aside {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
+aside #categories-2 {
+  width: 70%;
+  font-size: clamp(1rem, -0.875rem + 8.333vw, 1.5rem);
+}
+
+aside #media_gallery-2 {
+  width: 80%;
+  margin: 4%;
+}
+
+/*------------------------side bar desktop-----------------------*/
 /* Local/formulaire
 --------------------------------------------- */
 .admin-rapide {
