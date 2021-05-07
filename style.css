@@ -665,7 +665,7 @@ textarea {
 
 @media (min-width: 1200px) {
   .site {
-    grid-template-columns: 75% 25%;
+    grid-template-columns: 80% 20%;
     grid-template-areas: "header header" "main sidebar" "footer footer";
   }
 }
@@ -699,15 +699,44 @@ body {
   border: 0;
 }
 
-.no-sidebar .site {
-  display: grid;
-  grid-template-columns: auto;
-  /*grid-template-areas:
+.no-sidebar {
+  /*
+	.site {
+		display: grid;
+		grid-template-columns: auto;
+
+
+		grid-template-areas:
 			"header"
 			"main"
 			"widget"
 			"footer";
-			*/
+			
+
+	}
+ */
+}
+
+.no-sidebar .site {
+  display: grid;
+  grid-template-columns: auto;
+  /*
+	    grid-template-areas:
+		"header header"
+		"main main"
+		"footer footer";
+    */
+}
+
+@media (min-width: 1200px) {
+  .no-sidebar .site {
+    /*	grid-template-areas:
+			"header header"
+			"main main"
+			"widget widget"
+			"footer footer";
+		*/
+  }
 }
 
 /*
@@ -1846,15 +1875,14 @@ article .entry-header {
 
 article .entry-header .entry-title {
   font-family: "Montserrat", sans-serif;
-  margin: 0;
+  width: 50%;
   display: flex;
   justify-content: center;
-  font-size: clamp(1.5rem, -0.875rem + 8.333vw, 3rem);
+  align-items: center;
+  font-size: clamp(1.5rem, -0.875rem + 8.333vw, 2.6rem);
   background-color: #2a9d8f;
   color: #F1FAEE;
-  align-items: center;
-  margin: .5rem;
-  padding: .5rem;
+  padding: 1rem;
 }
 
 article span {
@@ -1973,19 +2001,39 @@ aside {
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  font-size: clamp(1rem, -0.875rem + 8.333vw, 1.2rem);
 }
 
 aside #categories-2 {
-  width: 70%;
-  font-size: clamp(1rem, -0.875rem + 8.333vw, 1.5rem);
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+aside #categories-2 h2 {
+  display: flex;
+  justify-content: center;
 }
 
 aside #media_gallery-2 {
-  width: 80%;
+  width: 90%;
   margin: 4%;
 }
 
+aside h2 {
+  display: flex;
+  justify-content: center;
+}
+
 /*------------------------side bar desktop-----------------------*/
+@media (min-width: 800px) {
+  aside #media_gallery-2 {
+    width: 80%;
+    margin: 4%;
+  }
+}
+
 /* Local/formulaire
 --------------------------------------------- */
 .admin-rapide {

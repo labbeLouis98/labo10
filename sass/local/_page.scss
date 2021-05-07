@@ -121,16 +121,14 @@ article{
 
     .entry-title{
       font-family: $font__title;
-      margin: 0;
+      width: 50%;
       display: flex;
       justify-content: center;
-      font-size: clamp(1.5rem, #{"-0.875rem + 8.333vw"}, 3rem);
+      align-items: center;
+      font-size: clamp(1.5rem, #{"-0.875rem + 8.333vw"}, 2.6rem);
       background-color: #2a9d8f;
-        color: #F1FAEE;
-        align-items: center;
-        margin: .5rem;
-    
-        padding: .5rem;
+      color: #F1FAEE;
+      padding: 1rem;
 
     }
 

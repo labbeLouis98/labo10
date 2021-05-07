@@ -10,19 +10,46 @@ body{
 
 .no-sidebar {
 
+	/*
 	.site {
 		display: grid;
 		grid-template-columns: auto;
 
 
-		/*grid-template-areas:
+		grid-template-areas:
 			"header"
 			"main"
 			"widget"
 			"footer";
-			*/
+			
 
 	}
+ */
+
+ .site {
+	display: grid;
+	grid-template-columns: auto;
+	
+      /*
+	    grid-template-areas:
+		"header header"
+		"main main"
+		"footer footer";
+    */
+		@include desktop{
+	
+			
+		/*	grid-template-areas:
+			"header header"
+			"main main"
+			"widget widget"
+			"footer footer";
+		*/
+		
+	}
+}
+
+
 }
 
 /*
