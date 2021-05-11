@@ -1233,6 +1233,8 @@ body.home::after {
   align-items: center;
   padding: .5rem;
   height: 6rem;
+  margin-top: 3rem;
+  margin-bottom: 0;
 }
 
 .list-cours section.bloc {
@@ -1319,20 +1321,31 @@ body.home::after {
   font-size: clamp(0.8rem, -0.875rem + 8.333vw, 1.4rem);
 }
 
-#annonce {
-  flex-direction: column;
+.lesAnnonces {
+  /* margin: 1rem;
+    //background-color: #c3e1e2;
+   
+   justify-content: center; */
   width: 100vw;
-  height: 20vh;
+  height: 30vh;
   display: flex;
+  justify-content: center;
+}
+
+#annonce {
   background-color: #f4a261;
+  border-radius: 1rem;
+  width: 80%;
+  display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin: 0;
 }
 
 #annonce h2 {
-  font-size: 2.6rem;
-  margin: 0;
+  margin: 0 auto;
+  font-size: clamp(1rem, -0.875rem + 8.333vw, 2.6rem);
+  text-align: center;
   display: flex;
   color: #1D3557;
   align-items: center;
@@ -1341,7 +1354,8 @@ body.home::after {
 
 #annonce p {
   margin: 0;
-  font-size: clamp(0.8rem, -0.875rem + 8.333vw, 1.4rem);
+  font-size: clamp(0.5rem, -0.875rem + 8.333vw, 1.4rem);
+  text-align: center;
 }
 
 /* Local/carrousel
@@ -2037,17 +2051,40 @@ aside h2 {
 /* Local/formulaire
 --------------------------------------------- */
 .admin-rapide {
+  align-items: center;
+  border: .5rem dotted #557a95;
   display: flex;
   justify-content: center;
-  width: 100vw;
+  width: 50%;
+  padding: 1%;
+  margin: 0 auto;
 }
 
 .admin-rapide div {
   flex-direction: column;
+  align-items: center;
+}
+
+.admin-rapide div input {
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.admin-rapide div textarea {
+  width: 100%;
+  height: 10vh;
+  resize: none;
+  margin-bottom: 10px;
+}
+
+.admin-rapide div button {
+  font-size: 1.2rem;
+  width: 20%;
+  height: 5rem;
 }
 
 .admin-rapide h3 {
-  font-size: 2.5rem;
+  font-size: clamp(1rem, -0.875rem + 8.333vw, 2rem);
   display: flex;
   justify-content: center;
   background-color: #557a95;

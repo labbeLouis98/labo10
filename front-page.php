@@ -21,7 +21,13 @@ get_header();
 				?>
     </header><!-- .page-header -->
 
-    <section id="annonce"></section>
+    <section class="lesAnnonces">
+
+    <div id="annonce">
+    
+    </div>
+    
+    </section>
 
     <section class="list-cours">
 
@@ -46,11 +52,11 @@ get_header();
     </section>
     <?php endif;?>
 
-    <?php if ($tPropriete ['typeCours'] != 'Web'): ?>
+    
         
     <h2><?php echo $tPropriete ['typeCours'] ?> </h2>
 
-    <?php endif;?>
+    
 
     <section <?php echo class_composent($tPropriete ['typeCours']) ?>>
     
