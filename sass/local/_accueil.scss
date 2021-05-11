@@ -137,24 +137,21 @@ body.home::after {
     justify-content: center;
     align-items: center;
 
-    h1 {
-        margin: 0 auto;
-    }
-
-    button {
-        width: 10rem;
-        //font-size: 1rem;
-    }
 
     p {
+        padding-left: 1rem;
+        justify-content: left;
+        width: 70%;
         font-size:clamp(.8rem, #{"-0.875rem + 8.333vw"}, 1.4rem);
+        
     }
+
+    img{
+        width:100%;
+    }
+
+
 }
-
-
-
-
-
 
 
 .lesAnnonces {

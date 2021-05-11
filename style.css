@@ -1309,16 +1309,15 @@ body.home::after {
   align-items: center;
 }
 
-.nouvelles h1 {
-  margin: 0 auto;
-}
-
-.nouvelles button {
-  width: 10rem;
-}
-
 .nouvelles p {
+  padding-left: 1rem;
+  justify-content: left;
+  width: 70%;
   font-size: clamp(0.8rem, -0.875rem + 8.333vw, 1.4rem);
+}
+
+.nouvelles img {
+  width: 100%;
 }
 
 .lesAnnonces {
@@ -1780,6 +1779,81 @@ main {
   font-size: 1rem;
 }
 
+.galerie-accueil {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin-right: 1rem;
+  background-color: #c3e1e2;
+  align-items: center;
+  width: 100vw;
+  height: 40vh;
+  /*--------------------------------------------Flip Card-------------------------------*/
+}
+
+.galerie-accueil .flip-card {
+  background-color: transparent;
+  width: 150px;
+  height: 150px;
+  perspective: 1000px;
+  margin: .5rem;
+  border: .5rem solid #f4a261;
+  border-radius: 5%;
+  justify-content: center;
+}
+
+.galerie-accueil .flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+  box-shadow: 0 4px 8px 0 #030711;
+}
+
+@media (min-width: 1200px) {
+  .galerie-accueil .flip-card-inner {
+    transform: scale(1.4);
+  }
+}
+
+.galerie-accueil .flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.galerie-accueil .flip-card-front, .galerie-accueil .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+}
+
+.galerie-accueil .flip-card-front {
+  background-color: #F1FAEE;
+  color: #030711;
+}
+
+.galerie-accueil .flip-card-back {
+  background-color: #2a9d8f;
+  color: #F1FAEE;
+  transform: rotateY(180deg);
+  justify-content: center;
+  align-items: center;
+  font-size: .3rem;
+  margin: 0 auto;
+  /*--------------------------Element deriere la carte  Info-------------------*/
+}
+
+.galerie-accueil .flip-card-back h1 {
+  transform: rotate(45deg);
+}
+
+.galerie-accueil .flip-card-back p {
+  font-size: 1rem;
+}
+
 /* Local/page
 --------------------------------------------- */
 header {
@@ -1917,6 +1991,14 @@ article .entry-content p {
   font-size: clamp(0.8rem, -0.875rem + 8.333vw, 1.5rem);
   font-weight: normal;
   margin: 1%;
+}
+
+.post-thumbnail {
+  margin-left: 1rem;
+}
+
+.post-thumbnail img {
+  width: 40%;
 }
 
 #primary > nav {

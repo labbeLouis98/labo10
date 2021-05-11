@@ -130,7 +130,7 @@ function class_composent($typeCours){
     }
 
     elseif($typeCours == 'Projets'){
-        return 'class="galerie"';
+        return 'class="galerie-accueil"';
     }
 
     else{
